@@ -1,0 +1,78 @@
+﻿@using Data.Models
+@model VisitorDetails
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Appointment Details</h2>
+            <hr />
+
+        </div>
+        <div>
+            <div class="mb-3" style="width: 50%">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" disabled/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+
+            </div>
+            <div class="mb-3" style="width: 50%">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" disabled />
+                <span asp-validation-for="Email" class="text-danger"></span>
+
+            </div>
+            <div class="mb-3" style="width: 50%">
+                <label asp-for="Phone"></label>
+                <input asp-for="Phone" class="form-control" disabled/>
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+          @*  <div class="mb-3" style="width: 50%">
+                <label asp-for="ByVechicle"></label>
+                <input asp-for="ByVechicle" class="form-control" disabled />
+                <span asp-validation-for="ByVechicle" class="text-danger"></span>
+            </div>*@
+            <div class="mb-3" style="width: 50%">
+                <label asp-for="Address"></label>
+                <input asp-for="Address" class="form-control" disabled/>
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="mb-3" style="width: 50%">
+                <label asp-for="Description"></label>
+                <input asp-for="Description" class="form-control" disabled />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="mb-3" style="width: 50%">
+                <label asp-for="Date"></label>
+                @*<input type="text" id="datepicker">*@
+
+                <input asp-for="Date" class="form-control" type="date" disabled/>
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="mb-3" style="width: 50%">
+                <label asp-for="AppointMentTime"></label>
+                <input asp-for="AppointMentTime" class="form-control" type="time" disabled />
+                <span asp-validation-for="AppointMentTime" class="text-danger"></span>
+            </div>
+            <div class="mb-3" style="width: 50%">
+                <label asp-for="User.Name"></label>
+                <input asp-for="User.Name" class="form-control" disabled />
+                <span asp-validation-for="User.Name" class="text-danger"></span>
+            </div>
+            <div class="mb-3" style="width: 50%">
+                <label asp-for="VisitingStatus"></label>
+                <input asp-for="VisitingStatus" class="form-control" disabled />
+                <span asp-validation-for="VisitingStatus" class="text-danger"></span>
+            </div>
+
+
+            <a asp-area="Customer" asp-controller="home" asp-action="History" class="btn btn-primary" style="width:150px">BackToList</a>
+        </div>
+    </div>
+
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+
+
+    }
